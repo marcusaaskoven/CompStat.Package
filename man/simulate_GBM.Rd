@@ -4,15 +4,7 @@
 \alias{simulate_GBM}
 \title{Simulate Geometric Brownian Motion}
 \usage{
-simulate_GBM(
-  S0,
-  r,
-  mu,
-  sigma,
-  num_simulations,
-  num_steps,
-  num_paths_to_plot = num_simulations/100
-)
+simulate_GBM(S0, r, mu, sigma, num_simulations, num_steps)
 }
 \arguments{
 \item{S0}{an initial value of the GBM}
@@ -26,15 +18,13 @@ simulate_GBM(
 \item{num_simulations}{amount of simulations to create}
 
 \item{num_steps}{amount of steps to simulate}
-
-\item{num_paths_to_plot}{amount of simulations to plot}
 }
 \value{
-a matrix of the selected amount of simulated GBMs, as well as a time vector showing time to maturity at every step
+a matrix of the selected amount of simulated GBMs
 }
 \description{
 Simulate Geometric Brownian Motion
 }
 \examples{
-simulate_GBM(100, 0.02, 0.02, 0.2, 1000, 52, 100)
+simulate_GBM(100, 0.02, 0.02, 0.2, 1000, 52)
 }
