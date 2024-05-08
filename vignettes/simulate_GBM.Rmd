@@ -1,0 +1,44 @@
+---
+title: "simulate_GBM"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{simulate_GBM}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+Imagine you are an investor seeking to model the future prices of a financial asset subject to random fluctuations. Geometric Brownian Motion (GBM) is a widely used stochastic process to simulate such price movements under certain assumptions. The simulate_GBM function provided here allows you to generate multiple simulated paths of GBM based on specified parameters.
+
+## Parameters
+
+- `S0`: Initial value of the GBM.
+- `r`: Risk-free interest rate.
+- `mu`: Drift component of the GBM.
+- `sigma`: Volatility component of the GBM.
+- `num_simulations`: Number of simulations to create.
+- `num_steps`: Number of steps to simulate.
+
+## Usage
+To use the simulate_GBM function, simply provide the desired parameters. For example, running:
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CompStat.Package)
+```
+
+```{r}
+x <- simulate_GBM(100, 0.02, 0.02, 0.2, 1000, 52)
+plot(x)
+```
+will simulate 1000 paths of GBM with 52 steps each, starting from an initial value of 100, a risk-free rate of 0.02, a drift of 0.02, and a volatility of 0.2.
+
+##Output
+The function returns a matrix containing the simulated GBM paths, where each column represents a separate simulation path and each row represents the asset price at different time steps. These simulated paths can be further analyzed or used for various financial modeling and risk management purposes.
+
+In summary, the simulate_GBM function provides a versatile tool for simulating and analyzing Geometric Brownian Motion, offering insights into the potential future price movements of financial assets under stochastic conditions.
+

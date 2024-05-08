@@ -1,0 +1,43 @@
+---
+title: "BS_option"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{BS_option}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+The BS_option function calculates the Black-Scholes option price, delta, and gamma for European call (CP = 'C') or put (CP = 'P') options based on specified parameters.
+
+## Parameters
+
+- `s`: Price of the underlying asset.
+- `K`: Strike price of the option.
+- `r`: Risk-free interest rate.
+- `tau`: Time until maturity (in years).
+- `sigma`: Implied volatility of the underlying asset.
+- `CP`: Option type ('C' for call, 'P' for put).
+
+## Usage
+To use the BS_option function, provide the required parameters:
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+```{r setup}
+library(CompStat.Package)
+```
+
+```{r}
+# Calculate a European call option price, delta, and gamma
+BS_option(100, 100, 0.02, 1, 0.2, 'C')
+```
+
+This will calculate the Black-Scholes option price, delta, and gamma for a European call option with the given parameters.
+
+## Output
+The function returns a list containing the calculated Black-Scholes option price, delta, and gamma based on the specified input parameters. These values provide insights into the option's pricing and sensitivity to changes in the underlying asset price.
+
+In summary, the BS_option function offers a convenient tool for pricing and analyzing European call and put options using the Black-Scholes model.
