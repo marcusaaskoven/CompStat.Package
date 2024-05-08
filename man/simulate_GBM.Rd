@@ -7,17 +7,17 @@
 simulate_GBM(S0, r, mu, sigma, num_simulations, num_steps)
 }
 \arguments{
-\item{S0}{an initial value of the GBM}
+\item{S0}{double containing the initial value of the GBM}
 
-\item{r}{the risk free interest rate}
+\item{r}{double containing the risk free interest rate}
 
-\item{mu}{the drift component}
+\item{mu}{double containing the drift component}
 
-\item{sigma}{the volatility component}
+\item{sigma}{double containing the volatility component}
 
-\item{num_simulations}{amount of simulations to create}
+\item{num_simulations}{number of simulations to create}
 
-\item{num_steps}{amount of steps to simulate}
+\item{num_steps}{number of steps to simulate}
 }
 \value{
 an object of class "LessExtremeClass"

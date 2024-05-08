@@ -7,17 +7,17 @@
 BS_option(s, K, r, tau, sigma, CP)
 }
 \arguments{
-\item{s}{the price of the underlying asset}
+\item{s}{double containing price of the underlying asset}
 
-\item{K}{the strike price of the option}
+\item{K}{double containing the strike price of the option}
 
-\item{r}{the risk free interest rate}
+\item{r}{double containing the risk free interest rate}
 
-\item{tau}{the time until maturity}
+\item{tau}{double containing the time until maturity (in years)}
 
-\item{sigma}{the implied volatility}
+\item{sigma}{double containing the implied volatility}
 
-\item{CP}{a string to determine whether option is european call, 'C', or put, 'P'}
+\item{CP}{string to determine whether option is european call, 'C', or put, 'P'}
 }
 \value{
 An object of class "ExtremeClass"

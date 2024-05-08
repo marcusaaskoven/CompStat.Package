@@ -1,11 +1,11 @@
 #' Simulate Geometric Brownian Motion
 #'
-#' @param S0 an initial value of the GBM
-#' @param r the risk free interest rate
-#' @param mu the drift component
-#' @param sigma the volatility component
-#' @param num_simulations amount of simulations to create
-#' @param num_steps amount of steps to simulate
+#' @param S0 double containing the initial value of the GBM
+#' @param r double containing the risk free interest rate
+#' @param mu double containing the drift component
+#' @param sigma double containing the volatility component
+#' @param num_simulations number of simulations to create
+#' @param num_steps number of steps to simulate
 #'
 #' @return an object of class "LessExtremeClass"
 #' @export
