@@ -35,9 +35,10 @@ library(CompStat.Package)
 x <- simulate_GBM(100, 0.02, 0.02, 0.2, 1000, 52)
 plot(x)
 ```
+
 will simulate 1000 paths of GBM with 52 steps each, starting from an initial value of 100, a risk-free rate of 0.02, a drift of 0.02, and a volatility of 0.2.
 
-##Output
+## Output
 The function returns a matrix containing the simulated GBM paths, where each column represents a separate simulation path and each row represents the asset price at different time steps. These simulated paths can be further analyzed or used for various financial modeling and risk management purposes.
 
 In summary, the simulate_GBM function provides a versatile tool for simulating and analyzing Geometric Brownian Motion, offering insights into the potential future price movements of financial assets under stochastic conditions.
