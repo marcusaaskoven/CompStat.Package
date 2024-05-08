@@ -10,22 +10,22 @@
 #' @export
 #'
 #' @examples
-#' # Create an example ExtremeClass object
-#' x <- BS_option(100, 100, 0.02, 1, 0.2, 'C')
+#' x <- BS_option(100, 100, 0.02, 1, 0.2, "C")
 #'
-#' # Summarize the ExtremeClass object
 #' summary(x)
 #'
 summary.ExtremeClass <- function(object, ...) {
   df_input <- data.frame(
-    `Parameter` = c("Initial price", "Strike price", "Interest rate",
-                    "Time until maturity", "Implied volatility", "Call(C)/Put(P)"),
+    `Parameter` = c(
+      "Initial price", "Strike price", "Interest rate",
+      "Time until maturity", "Implied volatility", "Call(C)/Put(P)"
+    ),
     `Value` = c(object$s, object$K, object$r, object$tau, object$sigma, object$CP)
   )
 
   df_output <- data.frame(
     `Output` = c("Price", "Delta", "Gamma"),
-    `Value` = round(c(object$price, object$delta, object$gamma),3)
+    `Value` = round(c(object$price, object$delta, object$gamma), 3)
   )
 
   cat("Input parameters:\n")

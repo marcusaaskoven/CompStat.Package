@@ -20,10 +20,10 @@ BS_option(s, K, r, tau, sigma, CP)
 \item{CP}{a string to determine whether option is european call, 'C', or put, 'P'}
 }
 \value{
-a list containg the Black-Scholes option price, the delta of the option and the gamma of the option
+An object of class "ExtremeClass"
 }
 \description{
-Black-Scholes option price, delta and gamma
+Generates option price, delta and gamma using standard Black-Scholes framework
 }
 \examples{
 BS_option(100, 100, 0.02, 1, 0.2, 'C')

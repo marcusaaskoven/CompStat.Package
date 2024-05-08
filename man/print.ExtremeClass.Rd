@@ -18,9 +18,7 @@ None (prints output directly)
 This function prints the Black-Scholes options price, delta, and gamma of an ExtremeClass object.
 }
 \examples{
-# Create an example ExtremeClass object
-x <- BS_option(100, 100, 0.02, 1, 0.2, 'C')
+x <- BS_option(100, 100, 0.02, 1, 0.2, "C")
 
-# Print the details of the ExtremeClass object
 print(x)
 }

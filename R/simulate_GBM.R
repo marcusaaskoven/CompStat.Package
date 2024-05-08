@@ -7,7 +7,7 @@
 #' @param num_simulations amount of simulations to create
 #' @param num_steps amount of steps to simulate
 #'
-#' @return a matrix of the selected amount of simulated GBMs
+#' @return an object of class "LessExtremeClass"
 #' @export
 #'
 #' @examples

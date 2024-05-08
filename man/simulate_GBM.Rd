@@ -20,7 +20,7 @@ simulate_GBM(S0, r, mu, sigma, num_simulations, num_steps)
 \item{num_steps}{amount of steps to simulate}
 }
 \value{
-a matrix of the selected amount of simulated GBMs
+an object of class "LessExtremeClass"
 }
 \description{
 Simulate Geometric Brownian Motion

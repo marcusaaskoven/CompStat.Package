@@ -7,11 +7,11 @@
 #' @export
 #'
 #' @examples
-#' x <- simulate_GBM(100, 0.02, 0.02, 0.2, 1000, 52)
+#' GBM <- simulate_GBM(100, 0.02, 0.02, 0.2, 1000, 52)
 #'
-#' plot(x)
+#' plot(GBM)
 #'
-plot.LessExtremeClass <- function(x, ...){
+plot.LessExtremeClass <- function(x, ...) {
   n_steps <- x$n_steps
   n_paths <- x$n_paths
   n_sim <- x$n_sim
@@ -23,8 +23,8 @@ plot.LessExtremeClass <- function(x, ...){
 
   plot_colors <- grDevices::rainbow(n_paths)
   graphics::matplot(time, y,
-                    type = "l", xlab = "Steps", ylab = "GBM",
-                    main = bquote("Simulations of Geometric Brownian Motion"),
-                    col = plot_colors, lty = 1
+    type = "l", xlab = "Steps", ylab = "GBM",
+    main = bquote("Simulations of Geometric Brownian Motion"),
+    col = plot_colors, lty = 1
   )
 }

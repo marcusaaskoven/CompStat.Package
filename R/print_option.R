@@ -9,17 +9,15 @@
 #' @export
 #'
 #' @examples
-#' # Create an example ExtremeClass object
-#' x <- BS_option(100, 100, 0.02, 1, 0.2, 'C')
+#' x <- BS_option(100, 100, 0.02, 1, 0.2, "C")
 #'
-#' # Print the details of the ExtremeClass object
 #' print(x)
 print.ExtremeClass <- function(x, ...) {
   # Create a data frame to display the results
   df <- data.frame(
-    'Black-Scholes options price' = x$price,
-    'Black-Scholes delta' = x$delta,
-    'Black-Scholes gamma' = x$gamma
+    "Black-Scholes options price" = x$price,
+    "Black-Scholes delta" = x$delta,
+    "Black-Scholes gamma" = x$gamma
   )
   # Print the data frame
   print(df)

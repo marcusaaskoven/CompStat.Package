@@ -18,8 +18,8 @@ a plot
 Plot method for class LessExtremeClass
 }
 \examples{
-x <- simulate_GBM(100, 0.02, 0.02, 0.2, 1000, 52)
+GBM <- simulate_GBM(100, 0.02, 0.02, 0.2, 1000, 52)
 
-plot(x)
+plot(GBM)
 
 }

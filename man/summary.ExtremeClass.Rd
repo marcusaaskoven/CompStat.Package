@@ -19,10 +19,8 @@ This function computes and presents a summary of an ExtremeClass object,
 including the parameters used to calculate the Black-Scholes option price, delta, and gamma.
 }
 \examples{
-# Create an example ExtremeClass object
-x <- BS_option(100, 100, 0.02, 1, 0.2, 'C')
+x <- BS_option(100, 100, 0.02, 1, 0.2, "C")
 
-# Summarize the ExtremeClass object
 summary(x)
 
 }

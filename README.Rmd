@@ -32,25 +32,18 @@ devtools::install_github("marcusaaskoven/CompStat.Package")
 
 ## Example
 
-This is a basic example which shows you how to solve a common problem:
+How to generate simulations of Geometric Brownian Motion and calculate a Black-Scholes option price, delta and gamma
 
 ```{r example}
 library(CompStat.Package)
-## basic example code
+## Simulate and plot GBM
+GBM <- simulate_GBM(100, 0.02, 0.02, 0.2, 1000, 52)
+plot(GBM)
+
+## Generate BS options price, delta and gamma
+x <- BS_option(100, 100, 0.02, 1, 0.2, "C")
+print(x)
+summary(x)
 ```
 
-What is special about using `README.Rmd` instead of just `README.md`? You can include R chunks like so:
 
-```{r cars}
-summary(cars)
-```
-
-You'll still need to render `README.Rmd` regularly, to keep `README.md` up-to-date. `devtools::build_readme()` is handy for this.
-
-You can also embed plots, for example:
-
-```{r pressure, echo = FALSE}
-plot(pressure)
-```
-
-In that case, don't forget to commit and push the resulting figure files, so they display on GitHub and CRAN.
